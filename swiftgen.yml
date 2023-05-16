@@ -1,0 +1,15 @@
+strings:
+  inputs:
+    - VelvetTraction/Resources/Strings/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: VelvetTraction/Generated/Strings+Generated.swift
+
+xcassets:
+  inputs:
+    - VelvetTraction/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      params:
+        forceProvidesNamespaces: true
+      output: VelvetTraction/Generated/XCAssets+Generated.swift
