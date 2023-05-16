@@ -1,4 +1,5 @@
 import UIKit
+import SharedResources
 
 final class MainScreenViewController: UIViewController {
 
@@ -8,6 +9,7 @@ final class MainScreenViewController: UIViewController {
 
     override func loadView() {
         view = mainScreenView
+        print(L10n.appTitle)
     }
 
     override func viewDidLoad() {

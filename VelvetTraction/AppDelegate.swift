@@ -1,3 +1,4 @@
+import MainScreen
 import UIKit
 
 @UIApplicationMain
@@ -10,9 +11,11 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
 
-        let rootViewController = ViewController()
+        let rootViewController = MainScreen.MainScreenAssembly.assemble()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = rootViewController
+        let navigationController = UINavigationController(rootViewController: rootViewController.viewController)
+
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
 
         return true
