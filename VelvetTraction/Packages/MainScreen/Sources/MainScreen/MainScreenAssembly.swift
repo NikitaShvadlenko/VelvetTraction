@@ -1,4 +1,5 @@
 import UIKit
+import Utils
 
 enum MainScreenAssembly {
     static func assemble() -> AssembledModule<MainScreenModuleInput> {

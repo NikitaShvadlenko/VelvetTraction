@@ -19,6 +19,17 @@ packages:
   SnapKit:
     url: https://github.com/SnapKit/SnapKit
     minorVersion: 5.6.0
+
+  ## Feature
+  MainScreen:
+    path: VelvetTraction/Packages/MainScreen
+    group: Feature
+
+  ## Utils
+  Utils:
+    path: VelvetTraction/Packages/Utils
+    group: Utils
+
   
 targets:
   VelvetTraction:
@@ -26,6 +37,9 @@ targets:
     type: application
     sources:
       - path: "VelvetTraction"
+    dependencies:
+      - package: SnapKit
+      - package: MainScreen
 
     settings:
       base:
@@ -33,7 +47,7 @@ targets:
         DISPLAY_NAME: "VelvetTraction"
         INFOPLIST_FILE: "VelvetTraction/Info.plist"
         DEVELOPMENT_TEAM: SGM5527A99
-        PRODUCT_BUNDLE_IDENTIFIER: com.nikitaShvad.VelvetTraction
+        PRODUCT_BUNDLE_IDENTIFIER: com.nikitaShvad.velvetTraction
         CODE_SIGN_STYLE: Manual
       configs:
         Debug:
