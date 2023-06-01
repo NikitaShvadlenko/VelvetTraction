@@ -9,7 +9,6 @@ final class MainScreenViewController: UIViewController {
 
     override func loadView() {
         view = mainScreenView
-        print(L10n.appTitle)
     }
 
     override func viewDidLoad() {
@@ -20,6 +19,10 @@ final class MainScreenViewController: UIViewController {
 
 // MARK: - MainScreenViewInput
 extension MainScreenViewController: MainScreenViewInput {
+    func setupWelcomeView(name: String, qoute: String) {
+        mainScreenView.setupView(name: name, qoute: qoute)
+    }
+
     func configureViews() {
     }
 }

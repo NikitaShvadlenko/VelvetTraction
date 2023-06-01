@@ -21,6 +21,16 @@ packages:
     minorVersion: 5.6.0
 
   ## Local Packages
+  
+  ## Business Logic
+  Providers:
+    path: VelvetTraction/Packages/Providers
+    group: Business Logic
+
+  SharedModels:
+    path: VelvetTraction/Packages/SharedModels
+    group: Business Logic
+
   ## Feature
   MainScreen:
     path: VelvetTraction/Packages/MainScreen

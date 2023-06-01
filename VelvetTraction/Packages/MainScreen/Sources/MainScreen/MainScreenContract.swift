@@ -1,6 +1,8 @@
+import SharedModels
 // sourcery: AutoMockable
 protocol MainScreenViewInput: AnyObject {
     func configureViews()
+    func setupWelcomeView(name: String, qoute: String)
 }
 
 protocol MainScreenViewOutput {
@@ -9,10 +11,12 @@ protocol MainScreenViewOutput {
 
 // sourcery: AutoMockable
 protocol MainScreenInteractorInput {
+    func fetchName()
 }
 
 // sourcery: AutoMockable
 protocol MainScreenInteractorOutput: AnyObject {
+    func interactorDidFetchName(name: String, qoute: String)
 }
 
 // sourcery: AutoMockable

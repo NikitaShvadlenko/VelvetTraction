@@ -11,11 +11,15 @@ final class MainScreenPresenter {
 extension MainScreenPresenter: MainScreenViewOutput {
     func viewDidLoad(_ view: MainScreenViewInput) {
         view.configureViews()
+        interactor?.fetchName()
     }
 }
 
 // MARK: - MainScreenInteractorOutput
 extension MainScreenPresenter: MainScreenInteractorOutput {
+    func interactorDidFetchName(name: String, qoute: String) {
+        view?.setupWelcomeView(name: name, qoute: qoute)
+    }
 }
 
 // MARK: - MainScreenRouterOutput

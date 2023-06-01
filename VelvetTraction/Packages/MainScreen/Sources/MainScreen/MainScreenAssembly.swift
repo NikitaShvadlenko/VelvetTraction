@@ -1,5 +1,6 @@
 import UIKit
 import Utils
+import Providers
 
 public enum MainScreenAssembly {
     public static func assemble() -> AssembledModule<MainScreenModuleInput> {
@@ -7,6 +8,7 @@ public enum MainScreenAssembly {
         let presenter = MainScreenPresenter()
         let interactor = MainScreenInteractor()
         let router = MainScreenRouter()
+        let nameProvider = NameProvider()
 
         viewController.presenter = presenter
 
@@ -15,6 +17,7 @@ public enum MainScreenAssembly {
         presenter.router = router
 
         interactor.presenter = presenter
+        interactor.nameProvider = nameProvider
 
         router.viewController = viewController
         router.presenter = presenter

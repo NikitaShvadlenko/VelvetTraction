@@ -14,7 +14,9 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Utils"),
-        .package(path: "../SharedResources")
+        .package(path: "../SharedResources"),
+        .package(path: "../Providers"),
+        .package(path: "../SharedModels")
     ],
 
     targets: [
@@ -24,7 +26,9 @@ let package = Package(
             name: "MainScreen",
             dependencies: [
             "Utils",
-            "SharedResources"
+            "SharedResources",
+            "Providers",
+            "SharedModels"
             ])
     ]
 )
